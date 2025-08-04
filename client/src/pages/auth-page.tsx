@@ -21,7 +21,7 @@ export default function AuthPage() {
     e.preventDefault();
     // Determine username based on password
     let username = "viewer";
-    if (password === "mathrock") {
+    if (password === "letsgotospace") {
       username = "admin";
     }
     loginMutation.mutate({ username, password });
