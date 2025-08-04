@@ -2,16 +2,13 @@ services:
   - type: web
     name: playlist-site
     env: node
+    plan: free
     buildCommand: npm install && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
-        sync: false
-      - key: SESSION_SECRET
-        sync: false
-      - key: OPENROUTER_API_KEY
         sync: false
     healthCheckPath: /
     autoDeploy: true 

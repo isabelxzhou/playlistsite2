@@ -62,10 +62,10 @@ export function setupAuth(app: Express) {
     const { username, password } = req.body;
     
     // Check hardcoded passwords first
-    if (username === "viewer" && password === "moonshot") {
+    if (username === "viewer" && password === "nothingnowhere") {
       const user = await storage.getUserByUsername("viewer") || await storage.createUser({
         username: "viewer",
-        password: await hashPassword("moonshot"),
+        password: await hashPassword("nothingnowhere"),
         role: "viewer"
       });
       req.login(user, (err) => {
@@ -75,10 +75,10 @@ export function setupAuth(app: Express) {
       return;
     }
 
-    if (username === "admin" && password === "letsgotospace") {
+    if (username === "admin" && password === "mathrock") {
       const user = await storage.getUserByUsername("admin") || await storage.createUser({
         username: "admin",
-        password: await hashPassword("letsgotospace"),
+        password: await hashPassword("mathrock"),
         role: "admin"
       });
       req.login(user, (err) => {

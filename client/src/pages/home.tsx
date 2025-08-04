@@ -139,7 +139,7 @@ export default function Home() {
             >
               <img src={headphonesImg} alt="headphones" className="w-8 h-8" />
               <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                playlists
+                iso playlists
               </h1>
             </div>
 
